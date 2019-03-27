@@ -35,16 +35,12 @@ curr	|string	|нет|	название валюты
 ### Example request
 
 ``` python
-curl --location --request POST "https://{{url}}/{{path}}" \
-  --header "Content-Type: application/json" \
-  --data "{
-	\"method\": \"create\",
-	\"model\" : \"userdata\",
-	\"data\":{
-		\"payway\": \"payeer\",
-		\"account\": \"P1234567\",
-		\"curr\":	\"USD\",
-		\"comment\":\"foo\"	
-	}
+import requests
+url = 'https://{{url}}/{{path}}'
+payload = "{\n\t\"method\": \"set_promo\",\n\t\"model\" : \"account\",\n\t\"data\" : {\n\t\t\"promo\":{{promo_name}}\n\t}\n}"
+headers = {
+  'Content-Type': 'application/json'
 }
+response = requests.request('POST', url, headers = headers, data = payload, allow_redirects=False, timeout=undefined, allow_redirects=false)
+print(response.text)
 ```
