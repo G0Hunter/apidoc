@@ -31,3 +31,20 @@ curr	|string	|нет|	название валюты
 	} 
 } 
 ```
+
+### Example request
+
+``` python
+curl --location --request POST "https://{{url}}/{{path}}" \
+  --header "Content-Type: application/json" \
+  --data "{
+	\"method\": \"create\",
+	\"model\" : \"userdata\",
+	\"data\":{
+		\"payway\": \"payeer\",
+		\"account\": \"P1234567\",
+		\"curr\":	\"USD\",
+		\"comment\":\"foo\"	
+	}
+}
+```
