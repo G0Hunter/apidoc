@@ -18,3 +18,15 @@
 payway	| string| 	да|	имя платежной системы
 account	| string|	да|	имя аккаунта плательщика в payway
 curr	|string	|нет|	название валюты
+
+### BODY
+
+``` python
+{
+	"method": "validate",
+	"model" : "userdata",
+	"data": {
+		"payway": "payeer",
+		"account": "P1234567"
+	} 
+} ```
