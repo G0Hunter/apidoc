@@ -29,4 +29,5 @@ curr	|string	|нет|	название валюты
 		"payway": "payeer",
 		"account": "P1234567"
 	} 
-} ```
+} 
+```
